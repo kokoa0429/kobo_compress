@@ -34,7 +34,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>masuda yasuto 情報工学工房 &copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
