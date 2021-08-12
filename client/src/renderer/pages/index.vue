@@ -9,6 +9,17 @@
       v-card-actions
         v-spacer
         div 転送量 14.25KB 元 335.56KB (4.24%)
+    v-btn(fab bottom right color="green" icon outlined fixed style="margin-bottom:20px" @click="dialog = true")
+      v-icon(dark) mdi-pencil
+    v-dialog(v-model="dialog")
+      v-card
+        v-card-title 投稿
+        v-card-text
+          v-text-field(label="post content")
+          v-file-input(label="File attachment")
+        v-card-actions
+          v-spacer
+          v-btn.white--text(color="blue") 投稿！
 </template>
 
 <script>
@@ -23,6 +34,11 @@ export default {
   methods: {
     sushiClick: async function () {
       alert(await api.sushi("sushi"))
+    }
+  },
+  data() {
+    return {
+      dialog: false
     }
   }
 }
